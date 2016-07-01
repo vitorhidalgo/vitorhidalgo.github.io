@@ -39,24 +39,24 @@ gulp.task
 			.pipe(uglify())
 			.pipe(concat('vendor.min.js', { newLine : '\r\n' }))
 			.pipe(edit(function(src, cb){ src = '// Last modified: ' + new Date().toLocaleString() + '\n\n' + src; cb(null, src);}))
-			.pipe(gulp.dest('front/js'))
+			.pipe(gulp.dest('assets/js'))
 			.pipe(jsFilter.restore)
 			// CSS
 			.pipe(cssFilter)
 			.pipe(minifycss({'keepSpecialComments' : 0}))
 			.pipe(concat('vendor.min.css', { newLine : '\r\n' }))
 			.pipe(edit(function(src, cb) { src = '/* Last modified: ' + new Date().toLocaleString() + '*/\n\n' + src; cb(null, src); }))
-			.pipe(gulp.dest('front/css'))
+			.pipe(gulp.dest('assets/css'))
 			.pipe(cssFilter.restore)
 			// FONTS
 			.pipe(fontFilter)
 			.pipe(flatten())
-			.pipe(gulp.dest('/front/css/fonts'))
+			.pipe(gulp.dest('/assets/css/fonts'))
 			.pipe(fontFilter.restore)
 			// IMAGES & ICONS
 			.pipe(imageFilter)
 			.pipe(flatten())
-			.pipe(gulp.dest('/front/img/vendor'))
+			.pipe(gulp.dest('/assets/img/vendor'))
 			.pipe(imageFilter.restore)
 
 			.on('end', function() { console.log( 'Gulp Task', 'Vendor task complete' ); });
@@ -68,11 +68,11 @@ gulp.task
 	'sass',
 	function()
 	{
-		return gulp.src('./front/sass/**/*.scss')
+		return gulp.src('./assets/sass/**/*.scss')
 			.pipe(concat('style.css'))
 			.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 			.pipe(edit(function(src, cb) { src = '/* Last modified: ' + new Date().toLocaleString() + '*/\n\n' + src; cb(null, src); }))
-			.pipe(gulp.dest('./front/css'));
+			.pipe(gulp.dest('./assets/css'));
 	}
 );
 
@@ -81,7 +81,7 @@ gulp.task
 	'sass-watch',
 	function()
 	{
-		gulp.watch('front/sass/**/*.scss', ['sass']);
+		gulp.watch('assets/sass/**/*.scss', ['sass']);
 	}
 );
 
