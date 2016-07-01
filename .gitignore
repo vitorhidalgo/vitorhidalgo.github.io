@@ -1,0 +1,5 @@
+front/bower_components/*
+bower_components/*
+front/node_modules/*
+node_modules/*
+.sublime-gulp.cache
