@@ -1,0 +1,38 @@
+[
+	{
+		"id" : 2,
+		"nameCustomer" : "Alumni",
+		"nameProject" : "Portal Institucional",
+		"description" : "Desenvolvimento do novo portal da escola de inglês Alumni, tecnologias empregadas HTML5, CSS3, jQuery e API Google Maps",
+		"thumb1" : "assets/img/projects/inspireme.jpg",
+		"thumb2" : "assets/img/projects/inspireme2.jpg",
+		"urlProject" : "http://alumni.org.br/",
+		"languages" : [
+			"HTML5", 
+			"CSS3", 
+			"jQuery"
+		],
+		"plataforms" : [
+			"desktop"
+		]
+	},
+	{
+		"id" : 1,
+		"nameCustomer" : "3M",
+		"nameProject" : "Inspira.mov",
+		"description" : "Projeto elaborado com animação em parallax, HTML5, CSS3, jQuery e Web Responsivo",
+		"thumb1" : "assets/img/projects/inspireme.jpg",
+		"thumb2" : "assets/img/projects/inspireme2.jpg",
+		"urlProject" : "http://www.inspiramov.com.br",
+		"languages" : [
+			"HTML5", 
+			"CSS3", 
+			"jQuery"
+		],
+		"plataforms" : [
+			"desktop", 
+			"tablet", 
+			"mobile"
+		]
+	}
+]
