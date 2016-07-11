@@ -1,4 +1,4 @@
-/* Last modified: 7/11/2016, 1:00:20 AM*/
+/* Last modified: 7/11/2016, 9:06:30 AM*/
 
 * {
   font-smoothing: antialiased;
@@ -18,6 +18,20 @@ body {
 img {
   width: 100%;
   display: block; }
+
+::-webkit-input-placeholder {
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+:-ms-input-placeholder {
+  color: #fff; }
 
 object {
   display: none; }

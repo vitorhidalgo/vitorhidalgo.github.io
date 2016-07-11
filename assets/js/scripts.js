@@ -26,6 +26,7 @@ portfolio.TMain = function($, objname, options)
 	{
 		// CODE ON APLICATION IS STARTED
 		self.triggerStarted();
+		self.placeholder();
 	};
 
 	this.processTriggers = function()
@@ -36,6 +37,11 @@ portfolio.TMain = function($, objname, options)
 	this.onElementsEvents = function()
 	{
 
+	};
+
+	this.placeholder = function()
+	{
+		$('input, textarea').placeholder();
 	};
 
 	CjsBaseClass.call(this, $, objname, options);

@@ -1,22 +1,23 @@
 {
-    "name": "portfolio",
-    "authors": [
-        "Vitor Hidalgo <vitor.hidalgo@gmail.com>"
-    ],
-    "description": "Portfólio de Vitor Hidalgo",
-    "main": "",
-    "license": "MIT",
-    "homepage": "http://www.vitorhidalgo.com.br",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "jquery": "^3.0.0",
-        "angular": "angularjs#^1.5.6",
-        "cjsbaseclass": "^1.2.6"
-    }
+  "name": "portfolio",
+  "authors": [
+    "Vitor Hidalgo <vitor.hidalgo@gmail.com>"
+  ],
+  "description": "Portfólio de Vitor Hidalgo",
+  "main": "",
+  "license": "MIT",
+  "homepage": "http://www.vitorhidalgo.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "angular": "angularjs#^1.5.6",
+    "cjsbaseclass": "^1.2.6",
+    "jquery-placeholder": "^2.3.1"
+  }
 }
