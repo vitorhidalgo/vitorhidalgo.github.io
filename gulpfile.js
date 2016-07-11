@@ -8,6 +8,7 @@ var edit      = require('gulp-edit');
 var minifycss = require('gulp-cssnano');
 var flatten   = require('gulp-flatten');
 var sass      = require('gulp-sass');
+var webserver = require('gulp-webserver');
 
 gulp.task
 (
@@ -68,9 +69,9 @@ gulp.task
 	'sass',
 	function()
 	{
-		return gulp.src('./assets/sass/**/*.scss')
+		return gulp.src('./assets/sass/style.scss')
 			.pipe(concat('style.css'))
-			.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+			.pipe(sass().on('error', sass.logError))
 			.pipe(edit(function(src, cb) { src = '/* Last modified: ' + new Date().toLocaleString() + '*/\n\n' + src; cb(null, src); }))
 			.pipe(gulp.dest('./assets/css'));
 	}

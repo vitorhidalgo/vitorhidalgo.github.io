@@ -1,0 +1,138 @@
+.highlight{
+	width: 100%;
+	height: 100vh;
+	display: inline-block;
+	background: url(../img/bg-highlight.jpg) center no-repeat;
+	background-size: cover;
+
+	h3{
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		color: #fff;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	h1{
+		font-family: 'Open Sans', sans-serif;
+		font-size: 132px;
+		color: #fff;
+		font-weight: 300;
+
+		span{
+			color: #00a2d1;
+			font-weight: 700;
+		}
+	}
+
+	ul{
+		display: inline-block;
+		margin-top: 40px;
+
+		li{
+			width: (100/3)+%;
+			float: left;
+			display: inline;
+			padding: 0 30px;
+
+			a.btn{
+				width: 90px;
+				height: 90px;
+				display: block;
+				border-radius: 50%;
+				background-color: rgba(#202022, .7);
+				text-align: center;
+				color: #fff;
+				line-height: 90px;
+				font-size: 30px;
+
+				@include transition(.2s);
+
+				@include box-shadow(#202022, 0);
+
+				&.btn-facebook:hover{
+					@include box-shadow-hover(#3b5998, 1);
+				}
+
+				&.btn-linkedin:hover{
+					@include box-shadow-hover(#007bb5, 1);
+				}
+
+				&.btn-envelope:hover{
+					@include box-shadow-hover(#00a2d1, 1);
+				}
+
+				&.btn-github:hover{
+					@include box-shadow-hover(#000, 1);
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px){
+	.highlight{
+		background-position: 20%;
+
+		h1{
+			font-size: 13vw;
+		}
+
+		h3{
+			font-size: 2vw;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px), screen and (max-height: 500px){
+	.highlight{
+		height: auto;
+		padding: 100px 10px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.highlight{
+		h1{
+			font-size: 16vw;
+		}
+
+		h3{
+			font-size: 3vw;
+		}
+
+		ul{
+			li{
+				padding: 0 2vw;
+
+				a.btn{	
+					width: 11vw;
+					height: 11vw;
+					line-height: 11vw;
+					font-size: 4vw;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px){
+	.highlight{
+		h3{
+			font-size: 4vw;
+		}
+
+		ul{
+			li{
+				padding: 0 3vw;
+
+				a.btn{	
+				    width: 14vw;
+				    height: 14vw;
+				    line-height: 14vw;
+				    font-size: 5vw;
+				}
+			}
+		}
+	}
+}
