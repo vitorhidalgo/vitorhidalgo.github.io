@@ -1,4 +1,4 @@
-/* Last modified: 7/11/2016, 12:16:22 AM*/
+/* Last modified: 7/11/2016, 12:41:31 AM*/
 
 * {
   font-smoothing: antialiased;
@@ -197,7 +197,7 @@ p {
       width: 33.3333%;
       float: left;
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       padding: 0 5px; }
       .contact form label input,
       .contact form label textarea {
@@ -209,6 +209,10 @@ p {
         font-size: 14px;
         color: #fff;
         border-radius: 3px; }
+        .contact form label input:focus,
+        .contact form label textarea:focus {
+          border-color: #00a2d1;
+          color: #00a2d1; }
       .contact form label.error input,
       .contact form label.error textarea {
         border-color: #ba0000;
@@ -242,7 +246,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .contact form label {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 13px; }
     .contact form label button.btn-send {
       width: 100%; } }
 
