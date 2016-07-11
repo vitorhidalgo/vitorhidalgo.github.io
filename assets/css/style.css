@@ -1,4 +1,4 @@
-/* Last modified: 7/11/2016, 12:41:31 AM*/
+/* Last modified: 7/11/2016, 12:47:17 AM*/
 
 * {
   font-smoothing: antialiased;
@@ -208,7 +208,8 @@ p {
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
         color: #fff;
-        border-radius: 3px; }
+        border-radius: 3px;
+        transition: 0.5s; }
         .contact form label input:focus,
         .contact form label textarea:focus {
           border-color: #00a2d1;
