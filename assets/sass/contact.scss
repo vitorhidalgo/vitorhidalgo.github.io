@@ -84,9 +84,12 @@
 @media only screen and (max-width: 767px){
 	.contact{
 		form{
+			width: 100%;
+			margin-left: 0;
 			label{
 				width: 100%;
 				margin-bottom: 13px;
+				padding: 0;
 				button.btn-send{
 					width: 100%;
 				}
