@@ -6,20 +6,26 @@ portfolio.TMain = function($, objname, options)
 
 	this.init = function()
 	{
-		self.initVars();
 		self.processTriggers();
 		self.onElementsEvents();
 	};
 
 	this.initVars = function()
 	{
-		
+		self.menu = {
+			container : $('nav.menu'),
+			position : $('nav.menu').offset().top
+		};
+		self.log.info(self.menu.position);
+
+		self.doc = document.documentElement;
 	};
 
 	this.onReady = function()
 	{
 		// CODE ON APLICATION IS READY
 		self.start();
+		self.initVars();
 	};
 
 	this.start = function()
@@ -27,6 +33,7 @@ portfolio.TMain = function($, objname, options)
 		// CODE ON APLICATION IS STARTED
 		self.triggerStarted();
 		self.placeholder();
+		self.events();
 	};
 
 	this.processTriggers = function()
@@ -34,14 +41,56 @@ portfolio.TMain = function($, objname, options)
 
 	};
 
+	this.events = function()
+	{
+		window.addEventListener('scroll', function(){
+			self.fixedMenu();
+		});
+
+		window.addEventListener('resize', function(){
+			self.menu.position = self.menu.container.offset().top
+			self.log.info(self.menu.position);
+		});
+	};
+
 	this.onElementsEvents = function()
 	{
-
+		self.openMenuMobile();
 	};
 
 	this.placeholder = function()
 	{
 		$('input, textarea').placeholder();
+	};
+
+	this.fixedMenu = function()
+	{
+		self.position = (window.pageYOffset || self.doc.scrollTop);
+		if(self.position >= self.menu.position)
+		{
+			self.menu.container.addClass('fixed');
+		}
+		else
+		{
+			self.menu.container.removeClass('fixed');
+		}
+	};
+
+	this.openMenuMobile = function()
+	{
+		$('nav.menu a.icon-menu').on('click', function(e){
+			e.preventDefault();
+			if($(this).hasClass('open'))
+			{
+				$(this).removeClass('open');
+				$('nav.menu .cont-menu').removeClass('open');
+			}
+			else
+			{
+				$(this).addClass('open');
+				$('nav.menu .cont-menu').addClass('open');
+			}
+		});
 	};
 
 	CjsBaseClass.call(this, $, objname, options);
