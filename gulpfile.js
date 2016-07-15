@@ -88,6 +88,29 @@ gulp.task
 
 gulp.task
 (
+	'webserver',
+	function()
+	{
+		gulp.src('./')
+			.pipe
+			(
+				webserver
+				(
+					{
+						livereload       : true,
+						directoryListing : true,
+						open             : true,
+						fallback         : 'index.html',
+						port             : 3000,
+						host             : '0.0.0.0'
+					}
+				)
+			);
+	}
+);
+
+gulp.task
+(
 	'default', 
 	function()
 	{
