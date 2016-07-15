@@ -1,4 +1,4 @@
-/* Last modified: 7/13/2016, 12:39:14 AM*/
+/* Last modified: 7/15/2016, 12:56:58 AM*/
 
 * {
   font-smoothing: antialiased;
@@ -283,7 +283,158 @@ nav.menu {
 
 .summary {
   background-color: #efefef;
-  color: #2c3e52; }
+  color: #2c3e52;
+  text-align: center; }
+  .summary h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #2c3e52;
+    font-size: 34px;
+    padding: 10px 30px;
+    background-color: #cacaca;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .summary .timeline {
+    width: 100%;
+    position: relative;
+    overflow: hidden; }
+    .summary .timeline:before {
+      content: ' ';
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      margin-left: -1px;
+      background-color: #cacaca; }
+  .summary .ico {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+    .summary .ico.ico-folder {
+      background-color: #ea4e41; }
+    .summary .ico.ico-book {
+      background-color: #15c09e; }
+    .summary .ico.ico-bookmark {
+      background-color: #cacaca; }
+      .summary .ico.ico-bookmark i {
+        color: #878787; }
+    .summary .ico i {
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      font-size: 20px;
+      margin: 10px 0 0 1px; }
+  .summary ul {
+    display: inline-block; }
+    .summary ul li {
+      width: 100%;
+      float: left;
+      display: inline-block; }
+      .summary ul li .item {
+        width: 350px;
+        display: inline-block;
+        position: relative; }
+        .summary ul li .item h5 {
+          font-family: 'Raleway', sans-serif;
+          font-size: 22px;
+          color: #2c3e52;
+          text-transform: uppercase;
+          font-weight: 700; }
+        .summary ul li .item h6 {
+          font-family: 'Raleway', sans-serif;
+          font-size: 18px;
+          color: #2c3e52; }
+          .summary ul li .item h6 span {
+            width: 4px;
+            height: 4px;
+            display: inline-block;
+            background-color: #ea4e41;
+            line-height: 0;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%; }
+        .summary ul li .item p {
+          text-align: left; }
+      .summary ul li:nth-child(2n+1) .item {
+        left: -175px;
+        text-align: right;
+        padding-right: 50px; }
+        .summary ul li:nth-child(2n+1) .item:after {
+          content: ' ';
+          width: 14px;
+          height: 14px;
+          display: block;
+          position: absolute;
+          top: 20px;
+          right: -7px;
+          background-color: #cacaca;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%; }
+        .summary ul li:nth-child(2n+1) .item p {
+          text-align: right; }
+      .summary ul li:nth-child(2n+2) .item {
+        left: 175px;
+        text-align: left;
+        padding-left: 50px; }
+        .summary ul li:nth-child(2n+2) .item:before {
+          content: ' ';
+          width: 14px;
+          height: 14px;
+          display: block;
+          position: absolute;
+          top: 20px;
+          left: -7px;
+          background-color: #cacaca;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%; }
+        .summary ul li:nth-child(2n+2) .item p {
+          text-align: left; }
+
+@media only screen and (max-width: 710px) {
+  .summary ul li {
+    width: 100%;
+    float: left;
+    display: block; }
+    .summary ul li:last-child .item {
+      margin-bottom: 0; }
+    .summary ul li .item {
+      width: 100%;
+      background-color: #efefef;
+      left: initial !important;
+      right: initial !important;
+      padding: 5px 0 7px 0 !important;
+      margin-bottom: 20px;
+      text-align: center !important; }
+      .summary ul li .item:before, .summary ul li .item:after {
+        display: none !important; }
+      .summary ul li .item p {
+        text-align: center !important; } }
+
+@media only screen and (max-width: 510px) {
+  .summary h4 {
+    font-size: 24px;
+    padding: 10px 20px; }
+  .summary ul li .item h5 {
+    font-size: 18px; }
+  .summary ul li .item h6 {
+    font-size: 15px; } }
 
 .skills {
   background-color: #2c3e52; }

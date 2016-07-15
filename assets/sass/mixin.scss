@@ -1,25 +1,32 @@
 @mixin box-shadow($color, $opacity) {
-	-webkit-box-shadow: inset 0px 0px 0px 1px rgba($color,$opacity);
-	-moz-box-shadow: inset 0px 0px 0px 1px rgba($color,$opacity);
-	box-shadow: inset 0px 0px 0px 1px rgba($color,$opacity);
+	-webkit-box-shadow : inset 0px 0px 0px 1px rgba($color,$opacity);
+	-moz-box-shadow    : inset 0px 0px 0px 1px rgba($color,$opacity);
+	box-shadow         : inset 0px 0px 0px 1px rgba($color,$opacity);
 }
 
 @mixin box-shadow-hover($color, $opacity){
-	-webkit-box-shadow: inset 0px 0px 0px 50px rgba($color,$opacity);
-	-moz-box-shadow: inset 0px 0px 0px 50px rgba($color,$opacity);
-	box-shadow: inset 0px 0px 0px 50px rgba($color,$opacity);
+	-webkit-box-shadow : inset 0px 0px 0px 50px rgba($color,$opacity);
+	-moz-box-shadow    : inset 0px 0px 0px 50px rgba($color,$opacity);
+	box-shadow         : inset 0px 0px 0px 50px rgba($color,$opacity);
 }
 
 @mixin transition($time){
-	-webkit-transition: all $time ease-in-out;
-	-moz-transition: all $time ease-in-out;
-	-o-transition: all $time ease-in-out;
-	transition: all $time ease-in-out;
+	-webkit-transition : all $time ease-in-out;
+	-moz-transition    : all $time ease-in-out;
+	-o-transition      : all $time ease-in-out;
+	transition         : all $time ease-in-out;
 }
 
 @mixin rotate($deg : 0deg){
-	-webkit-transform: rotate($deg);
-	-moz-transform: rotate($deg);
-	-o-transform: rotate($deg);
-	transform: rotate($deg);
+	-webkit-transform : rotate($deg);
+	-moz-transform    : rotate($deg);
+	-o-transform      : rotate($deg);
+	transform         : rotate($deg);
+}
+
+@mixin border-radius($radius : 10px) {
+	-webkit-border-radius : $radius;
+	-moz-border-radius    : $radius;
+	-ms-border-radius     : $radius;
+	border-radius         : $radius;
 }
