@@ -4,4 +4,145 @@
 	h2{
 		color: #fff;
 	}
+
+	.item{
+	    width: 20%;
+	    height: auto;
+	    float: left;
+	    display: block;
+	    position: relative;
+
+	    .details{
+		    width: 96%;
+		    height: 96%;
+		    margin: 0 2% 4% 2%;
+		    position: absolute;
+
+		    background-color: #202022;
+
+		    &.html{
+		    	background: url(http://img13.deviantart.net/66af/i/2015/234/1/d/white_html5_logo_by_itslino-d96s457.png) center no-repeat #202022; 
+		    	background-size: 50%;
+		    }
+
+		    &.css{
+		    	background: url(http://support.webworkscorp.com/wp-content/uploads/images/wwc-icons/white/css3.png) center no-repeat #202022; 
+		    	background-size: 50%; 
+		    	background-color: #202022;
+		    }
+
+		    &.javascript{
+		    	background: url(http://8sph.azureedge.net/media/Default/_Profiles/8f14fafe/9ddfec15/js-white.png?v=635866391040000000) center no-repeat #202022; 
+		    	background-size: 50%; 
+		    	background-color: #202022;
+		    }
+
+		    &.angular{
+		    	background: url(https://angular.io/resources/images/logos/angular2/angular_whiteTransparent.png) center no-repeat #202022; 
+		    	background-size: 60%; 
+		    	background-color: #202022;
+		    }
+
+		    &.sass{
+		    	background: url(http://sass-lang.com/assets/img/styleguide/white-e44bed0d.png) center no-repeat #202022; 
+		    	background-size: 50%; 
+		    	background-color: #202022;
+		    }
+
+		    &.gulp{
+		    	background: url(http://cedesignlab.com/Services/img/logo_gulp.png) center no-repeat #202022; 
+		    	background-size: 30%; 
+		    	background-color: #202022;
+		    }
+
+		    &.nodejs{
+		    	background: url(../img/skills/nodejs.png) center no-repeat #202022; 
+		    	background-size: 50%; 
+		    	background-color: #202022;
+		    }
+
+		    &.bower{
+		    	background: url(../img/skills/bower.png) center no-repeat #202022; 
+		    	background-size: 50%; 
+		    	background-color: #202022;
+		    }
+
+		    &.php{
+		    	background: url(http://www.xsolve.pl/wp-content/themes/xsolve2014/assets/img/what-we-do/php-logo.png) center no-repeat #202022; 
+		    	background-size: 60%; 
+		    	background-color: #202022;
+		    }
+
+		    &.python{
+		    	background: url(../img/skills/python.png) center no-repeat #202022; 
+		    	background-size: 40%; 
+		    	background-color: #202022;
+		    }
+
+		    &.django{
+		    	background: url(../img/skills/django.png) center no-repeat #202022; 
+		    	background-size: 60%; 
+		    	background-color: #202022;
+		    }
+
+		    &.git{
+		    	background: url(http://thoughtram.io/images/git-logo-white.png) center no-repeat #202022; 
+		    	background-size: 40%; 
+		    	background-color: #202022;
+		    }
+
+		    &.wordpress{
+		    	background: url(../img/skills/wordpress.png) center no-repeat #202022; 
+		    	background-size: 40%; 
+		    	background-color: #202022;
+		    }
+
+		    &.yeoman{
+		    	background: url(../img/skills/yeoman.png) center no-repeat #202022; 
+		    	background-size: 45%; 
+		    	background-color: #202022;
+		    }
+
+	    	@include border-radius(3px);
+	    	@include transition(.5s);
+
+	    	h5{
+	    		font-family: 'Raleway', sans-serif;
+	    		font-size: 16px;
+	    		color: #efefef;
+	    		text-align: center;
+	    		padding: 5px;
+	    	}
+	    }
+
+    	img{
+	    	width: 100%;
+	    	display: block;
+	    }
+	}
+}
+
+@media only screen and (max-width: 768px)
+{
+	.skills{
+		.item{
+			width: 25%;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.skills{
+		.item{
+			width: 33.3333%;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.skills{
+		.item{
+			width: 50%;
+		}
+	}
 }
