@@ -103,6 +103,12 @@
 		    	background-color: #202022;
 		    }
 
+		    &.jquery{
+		    	background: url(http://dev.bowdenweb.com/a/i/cons/simple-icons/jquery/jquery-4096.png) center no-repeat #202022; 
+		    	background-size: 50%; 
+		    	background-color: #202022;
+		    }
+
 	    	@include border-radius(3px);
 	    	@include transition(.5s);
 

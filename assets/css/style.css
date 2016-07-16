@@ -1,4 +1,4 @@
-/* Last modified: 7/16/2016, 2:03:12 AM*/
+/* Last modified: 7/16/2016, 2:08:36 AM*/
 
 * {
   font-smoothing: antialiased;
@@ -514,6 +514,10 @@ nav.menu {
       .skills .item .details.yeoman {
         background: url(../img/skills/yeoman.png) center no-repeat #202022;
         background-size: 45%;
+        background-color: #202022; }
+      .skills .item .details.jquery {
+        background: url(http://dev.bowdenweb.com/a/i/cons/simple-icons/jquery/jquery-4096.png) center no-repeat #202022;
+        background-size: 50%;
         background-color: #202022; }
       .skills .item .details h5 {
         font-family: 'Raleway', sans-serif;
