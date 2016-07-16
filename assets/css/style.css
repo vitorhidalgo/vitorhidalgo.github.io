@@ -1,4 +1,4 @@
-/* Last modified: 7/16/2016, 2:02:25 AM*/
+/* Last modified: 7/16/2016, 2:03:12 AM*/
 
 * {
   font-smoothing: antialiased;
@@ -533,7 +533,7 @@ nav.menu {
   .skills .item {
     width: 33.3333%; } }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
   .skills .item {
     width: 50%; } }
 
