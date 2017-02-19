@@ -1,4 +1,4 @@
-/* Last modified: 7/16/2016, 2:08:36 AM*/
+/* Last modified: 2/19/2017, 7:49:49 PM*/
 
 * {
   font-smoothing: antialiased;
@@ -461,64 +461,94 @@ nav.menu {
       -o-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
       .skills .item .details.html {
-        background: url(http://img13.deviantart.net/66af/i/2015/234/1/d/white_html5_logo_by_itslino-d96s457.png) center no-repeat #202022;
+        background: url(../img/skills/html5.png) center no-repeat #202022;
         background-size: 50%; }
+        .skills .item .details.html:hover {
+          background-color: #ff9447; }
       .skills .item .details.css {
-        background: url(http://support.webworkscorp.com/wp-content/uploads/images/wwc-icons/white/css3.png) center no-repeat #202022;
+        background: url(../img/skills/css3.png) center no-repeat #202022;
         background-size: 50%;
         background-color: #202022; }
+        .skills .item .details.css:hover {
+          background-color: #1b8bba; }
       .skills .item .details.javascript {
-        background: url(http://8sph.azureedge.net/media/Default/_Profiles/8f14fafe/9ddfec15/js-white.png?v=635866391040000000) center no-repeat #202022;
+        background: url(../img/skills/javascript.png) center no-repeat #202022;
         background-size: 50%;
         background-color: #202022; }
+        .skills .item .details.javascript:hover {
+          background-color: #d5941c; }
       .skills .item .details.angular {
-        background: url(https://angular.io/resources/images/logos/angular2/angular_whiteTransparent.png) center no-repeat #202022;
+        background: url(../img/skills/angular.png) center no-repeat #202022;
         background-size: 60%;
         background-color: #202022; }
+        .skills .item .details.angular:hover {
+          background-color: #A5110D; }
       .skills .item .details.sass {
-        background: url(http://sass-lang.com/assets/img/styleguide/white-e44bed0d.png) center no-repeat #202022;
+        background: url(../img/skills/sass.png) center no-repeat #202022;
         background-size: 50%;
         background-color: #202022; }
+        .skills .item .details.sass:hover {
+          background-color: #CD6799; }
       .skills .item .details.gulp {
-        background: url(http://cedesignlab.com/Services/img/logo_gulp.png) center no-repeat #202022;
-        background-size: 30%;
+        background: url(../img/skills/gulp.png) center no-repeat #202022;
+        background-size: cover;
         background-color: #202022; }
+        .skills .item .details.gulp:hover {
+          background-color: #E84C50; }
       .skills .item .details.nodejs {
         background: url(../img/skills/nodejs.png) center no-repeat #202022;
         background-size: 50%;
         background-color: #202022; }
+        .skills .item .details.nodejs:hover {
+          background-color: #669735; }
       .skills .item .details.bower {
         background: url(../img/skills/bower.png) center no-repeat #202022;
         background-size: 50%;
         background-color: #202022; }
+        .skills .item .details.bower:hover {
+          background-color: #fabd00; }
       .skills .item .details.php {
-        background: url(http://www.xsolve.pl/wp-content/themes/xsolve2014/assets/img/what-we-do/php-logo.png) center no-repeat #202022;
+        background: url(../img/skills/php.png) center no-repeat #202022;
         background-size: 60%;
         background-color: #202022; }
+        .skills .item .details.php:hover {
+          background-color: #6082BB; }
       .skills .item .details.python {
         background: url(../img/skills/python.png) center no-repeat #202022;
         background-size: 40%;
         background-color: #202022; }
+        .skills .item .details.python:hover {
+          background-color: #2a5579; }
       .skills .item .details.django {
         background: url(../img/skills/django.png) center no-repeat #202022;
         background-size: 60%;
         background-color: #202022; }
+        .skills .item .details.django:hover {
+          background-color: #0b2a1f; }
       .skills .item .details.git {
-        background: url(http://thoughtram.io/images/git-logo-white.png) center no-repeat #202022;
-        background-size: 40%;
+        background: url(../img/skills/git.png) center no-repeat #202022;
+        background-size: 80%;
         background-color: #202022; }
+        .skills .item .details.git:hover {
+          background-color: #e03010; }
       .skills .item .details.wordpress {
         background: url(../img/skills/wordpress.png) center no-repeat #202022;
         background-size: 40%;
         background-color: #202022; }
+        .skills .item .details.wordpress:hover {
+          background-color: #195671; }
       .skills .item .details.yeoman {
         background: url(../img/skills/yeoman.png) center no-repeat #202022;
         background-size: 45%;
         background-color: #202022; }
+        .skills .item .details.yeoman:hover {
+          background-color: #4292a0; }
       .skills .item .details.jquery {
-        background: url(http://dev.bowdenweb.com/a/i/cons/simple-icons/jquery/jquery-4096.png) center no-repeat #202022;
-        background-size: 50%;
+        background: url(../img/skills/jquery.png) center no-repeat #202022;
+        background-size: 80%;
         background-color: #202022; }
+        .skills .item .details.jquery:hover {
+          background-color: #146c86; }
       .skills .item .details h5 {
         font-family: 'Raleway', sans-serif;
         font-size: 16px;
@@ -631,6 +661,18 @@ footer {
     footer a.btn i {
       color: #202022;
       font-size: 14px; }
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8) url(../img/loading.gif) center no-repeat;
+  display: none; }
 
 @media only screen and (max-width: 800px) {
   h2 {

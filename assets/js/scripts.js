@@ -16,7 +16,6 @@ portfolio.TMain = function($, objname, options)
 			container : $('nav.menu'),
 			position : $('nav.menu').offset().top
 		};
-		self.log.info(self.menu.position);
 
 		self.doc = document.documentElement;
 	};
@@ -48,7 +47,7 @@ portfolio.TMain = function($, objname, options)
 		});
 
 		window.addEventListener('resize', function(){
-			self.menu.position = self.menu.container.offset().top
+			self.menu.position = self.menu.container.offset().top;
 			self.log.info(self.menu.position);
 		});
 	};
@@ -65,7 +64,7 @@ portfolio.TMain = function($, objname, options)
 
 	this.fixedMenu = function()
 	{
-		self.position = (window.pageYOffset || self.doc.scrollTop);
+		self.position = (window.pageYOffset);
 		if(self.position >= self.menu.position)
 		{
 			self.menu.container.addClass('fixed');
@@ -104,6 +103,6 @@ portfolio.Main = new portfolio.TMain
 	'Main',
 	{
 		'debug': 1,
-		'highlighted': 'red'
+		'highlighted': 'auto'
 	}
 );

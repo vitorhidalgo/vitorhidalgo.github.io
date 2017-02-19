@@ -52,12 +52,12 @@ gulp.task
 			// FONTS
 			.pipe(fontFilter)
 			.pipe(flatten())
-			.pipe(gulp.dest('/assets/css/fonts'))
+			.pipe(gulp.dest('assets/css/fonts'))
 			.pipe(fontFilter.restore)
 			// IMAGES & ICONS
 			.pipe(imageFilter)
 			.pipe(flatten())
-			.pipe(gulp.dest('/assets/img/vendor'))
+			.pipe(gulp.dest('assets/img/vendor'))
 			.pipe(imageFilter.restore)
 
 			.on('end', function() { console.log( 'Gulp Task', 'Vendor task complete' ); });
