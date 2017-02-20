@@ -1,4 +1,4 @@
-/* Last modified: 2/19/2017, 7:49:49 PM*/
+/* Last modified: 2/19/2017, 11:05:58 PM*/
 
 * {
   font-smoothing: antialiased;
@@ -12,8 +12,9 @@
   border: 0;
   -webkit-tap-highlight-color: transparent; }
 
-body {
-  min-width: 320px; }
+html, body {
+  min-width: 320px;
+  height: 100%; }
 
 img {
   width: 100%;
@@ -32,6 +33,16 @@ img {
 
 :-ms-input-placeholder {
   color: #fff; }
+
+.mCSB_outside + .mCSB_scrollTools {
+  right: 0;
+  z-index: 1000; }
+
+.mCS-vho.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #00a2d1; }
+
+.mCS-vho.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #878787; }
 
 object {
   display: none; }
@@ -89,13 +100,12 @@ nav.menu {
   height: auto;
   padding: 20px;
   background-color: rgba(32, 32, 34, 0.9);
-  position: absolute;
+  position: fixed;
   z-index: 100;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0; }
   nav.menu.fixed {
-    position: fixed;
     top: 0;
     bottom: initial; }
   nav.menu a.icon-menu {
@@ -132,9 +142,8 @@ nav.menu {
         color: #fff;
         font-size: 14px;
         text-transform: uppercase; }
-      nav.menu ul.links li.active a {
-        font-weight: 700;
-        color: #00a2d1; }
+        nav.menu ul.links li a.active {
+          color: #00a2d1; }
   nav.menu ul.social {
     float: left;
     display: inline; }

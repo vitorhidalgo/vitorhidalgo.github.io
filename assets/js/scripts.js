@@ -14,7 +14,7 @@ portfolio.TMain = function($, objname, options)
 	{
 		self.menu = {
 			container : $('nav.menu'),
-			position : $('nav.menu').offset().top
+			position  : $('nav.menu').offset().top
 		};
 
 		self.doc = document.documentElement;
@@ -31,6 +31,7 @@ portfolio.TMain = function($, objname, options)
 	{
 		// CODE ON APLICATION IS STARTED
 		self.triggerStarted();
+		self.applyScroll();
 		self.placeholder();
 		self.events();
 	};
@@ -42,13 +43,42 @@ portfolio.TMain = function($, objname, options)
 
 	this.events = function()
 	{
-		window.addEventListener('scroll', function(){
-			self.fixedMenu();
-		});
+		window.addEventListener
+		(
+			'scroll', 
+			function()
+			{
+				// self.fixedMenu();
+			}
+		);
 
-		window.addEventListener('resize', function(){
-			self.menu.position = self.menu.container.offset().top;
-			self.log.info(self.menu.position);
+		window.addEventListener
+		(
+			'resize', 
+			function()
+			{
+				self.menu.position = self.menu.container.offset().top;
+			}
+		);
+
+		$(document).on
+		(
+			'click',
+			'.menu a[href^="#"]',
+			function(e)
+			{
+				var href=$(this).attr("href"), target=$(href).parents(".mCustomScrollbar"); 
+				if( target.length )
+				{
+					e.preventDefault();
+					target.mCustomScrollbar( "scrollTo", href );
+				}
+			}
+		);
+
+		$(".menu a[href*='#']").mPageScroll2id({
+		    clickEvents : true,
+		    highlightClass:"active"
 		});
 	};
 
@@ -62,7 +92,7 @@ portfolio.TMain = function($, objname, options)
 		$('input, textarea').placeholder();
 	};
 
-	this.fixedMenu = function()
+	this.fixedMenu = function( p_position )
 	{
 		self.position = (window.pageYOffset);
 		if(self.position >= self.menu.position)
@@ -77,19 +107,50 @@ portfolio.TMain = function($, objname, options)
 
 	this.openMenuMobile = function()
 	{
-		$('nav.menu a.icon-menu').on('click', function(e){
-			e.preventDefault();
-			if($(this).hasClass('open'))
+		$('nav.menu a.icon-menu').on
+		(
+			'click', 
+			function(e)
 			{
-				$(this).removeClass('open');
-				$('nav.menu .cont-menu').removeClass('open');
+				e.preventDefault();
+				if( $(this).hasClass('open') )
+				{
+					$(this).removeClass('open');
+					$('nav.menu .cont-menu').removeClass('open');
+				}
+				else
+				{
+					$(this).addClass('open');
+					$('nav.menu .cont-menu').addClass('open');
+				}
 			}
-			else
+		);
+	};
+
+	this.applyScroll = function()
+	{
+		$('body').mCustomScrollbar
+		(
 			{
-				$(this).addClass('open');
-				$('nav.menu .cont-menu').addClass('open');
+				'theme'             : 'vho',
+				'scrollbarPosition' : 'outside',
+				'scrollEasing'      : 'easeInOut',
+				'autoHideScrollbar' : true,
+				'callbacks'         : {
+					whileScrolling : function()
+					{
+						self.fixedMenu( this.mcs.draggerTop );
+					}
+				}
 			}
-		});
+		);
+
+		$("a[href*='#']").mPageScroll2id
+		(
+			{
+				'appendHash' : true
+			}
+		);
 	};
 
 	CjsBaseClass.call(this, $, objname, options);
@@ -102,7 +163,7 @@ portfolio.Main = new portfolio.TMain
 	window.cjsbaseclass_jquery,
 	'Main',
 	{
-		'debug': 1,
-		'highlighted': 'auto'
+		'debug'       : 1,
+		'highlighted' : 'auto'
 	}
 );
