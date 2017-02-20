@@ -31,9 +31,9 @@ portfolio.TMain = function($, objname, options)
 	{
 		// CODE ON APLICATION IS STARTED
 		self.triggerStarted();
-		self.applyScroll();
 		self.placeholder();
 		self.events();
+		self.breakPoints();
 	};
 
 	this.processTriggers = function()
@@ -49,15 +49,6 @@ portfolio.TMain = function($, objname, options)
 			function()
 			{
 				// self.fixedMenu();
-			}
-		);
-
-		window.addEventListener
-		(
-			'resize', 
-			function()
-			{
-				self.menu.position = self.menu.container.offset().top;
 			}
 		);
 
@@ -84,6 +75,34 @@ portfolio.TMain = function($, objname, options)
 			clickEvents    : true,
 			highlightClass : 'active'
 		});
+	};
+
+	this.breakPoints = function()
+	{
+		$('#page').umsBreakPoints
+		(
+			{
+				'syncWidthMediaQuery' : true,
+				'widths'              : [768],
+				'onBreakPoint'        : function(p_eventdata)
+				{
+					if(p_eventdata.curWidth <= 768)
+					{
+						this.element.toggleClass('device-desktop device-mobile');
+						self.destroyScroll();
+					}
+					else
+					{
+						self.applyScroll();
+					}
+				}
+			}
+		);
+	};
+
+	this.destroyScroll = function()
+	{
+		$('#page').mCustomScrollbar("destroy");
 	};
 
 	this.onElementsEvents = function()
