@@ -1,4 +1,4 @@
-/* Last modified: 2/19/2017, 11:20:17 PM*/
+/* Last modified: 2/20/2017, 12:14:10 AM*/
 
 * {
   font-smoothing: antialiased;
@@ -142,7 +142,7 @@ nav.menu {
         color: #fff;
         font-size: 14px;
         text-transform: uppercase; }
-        nav.menu ul.links li a.active {
+        nav.menu ul.links li a.mPS2id-highlight {
           color: #00a2d1; }
   nav.menu ul.social {
     float: left;
