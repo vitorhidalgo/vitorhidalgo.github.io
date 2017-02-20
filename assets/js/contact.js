@@ -115,7 +115,7 @@ portfolio.Tcontact = function($, objname, options)
 
 	this.showLoading = function()
 	{
-		$('.loading').show();
+		$('.loading').fadeIn();
 	};
 
 	this.hideLoading = function()
@@ -124,7 +124,7 @@ portfolio.Tcontact = function($, objname, options)
 		(
 			function() 
 			{
-				$('.loading').hide();
+				$('.loading').fadeOut();
 			}, 
 			1000
 		);
