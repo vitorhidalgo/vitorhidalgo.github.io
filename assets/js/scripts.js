@@ -31,6 +31,7 @@ portfolio.TMain = function($, objname, options)
 	{
 		// CODE ON APLICATION IS STARTED
 		self.triggerStarted();
+		self.applyScroll();
 		self.placeholder();
 		self.events();
 		self.breakPoints();
