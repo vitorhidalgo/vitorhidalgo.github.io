@@ -51,9 +51,9 @@ portfolio.Tcontact = function($, objname, options)
 		$("#formContact").validate
 		(
 			{
-				debug: true,
-				errorElement: 'span',
-				errorPlacement: $.noop,
+				debug          : true,
+				errorElement   : 'span',
+				errorPlacement : $.noop,
 				highlight: function( element, errorClass, validClass )
 				{
 					self.trigger('field-invalid', element.form.id + '-' + element.id );
@@ -81,10 +81,10 @@ portfolio.Tcontact = function($, objname, options)
 		$.ajax
 		(
 			{
-				url: 'https://portfolio-vitorhidalgo.herokuapp.com/contact/',
-				type: 'POST',
-				dataType: 'json',
-				data: p_form
+				url      : 'https://portfolio-vitorhidalgo.herokuapp.com/contact/',
+				type     : 'POST',
+				dataType : 'json',
+				data     : p_form
 			}
 		)
 		.done

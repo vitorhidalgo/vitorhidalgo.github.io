@@ -67,18 +67,22 @@ portfolio.TMain = function($, objname, options)
 			'.menu a[href^="#"]',
 			function(e)
 			{
-				var href=$(this).attr("href"), target=$(href).parents(".mCustomScrollbar"); 
+				var href=$(this).attr('href'), target=$(href).parents('.mCustomScrollbar');
 				if( target.length )
 				{
 					e.preventDefault();
-					target.mCustomScrollbar( "scrollTo", href );
+					
+					$('nav.menu a.open').removeClass('open');
+					$('nav.menu .cont-menu').removeClass('open');
+
+					target.mCustomScrollbar( 'scrollTo', href );
 				}
 			}
 		);
 
-		$(".menu a[href*='#']").mPageScroll2id({
-		    clickEvents : true,
-		    highlightClass:"active"
+		$('.menu a[href*="#"]').mPageScroll2id({
+			clickEvents    : true,
+			highlightClass : 'active'
 		});
 	};
 
