@@ -56,7 +56,6 @@
 				background: center no-repeat;
 				background-size: cover;
 				transform: scale3d(1,1,1);
-				opacity: 0.2;
 
 				@include transition(.3s);
 			}
@@ -74,7 +73,6 @@
 			}
 			.bg{
 				transform: scale3d(1.1,1.1,1.1);
-				opacity: 1;
 			}
 		}
 
