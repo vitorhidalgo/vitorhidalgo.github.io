@@ -1,4 +1,4 @@
-/* Last modified: 2/20/2017, 10:52:41 PM*/
+/* Last modified: 2/20/2017, 10:54:17 PM*/
 
 * {
   font-smoothing: antialiased;
@@ -666,7 +666,7 @@ nav.menu {
   .portfolio .item {
     width: calc(100%/3); } }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
   .portfolio .item {
     width: calc(100%/2); }
     .portfolio .item .table {
@@ -674,7 +674,7 @@ nav.menu {
     .portfolio .item .table-cell {
       display: table-cell; } }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 360px) {
   .portfolio .item {
     width: calc(100%/1); } }
 
