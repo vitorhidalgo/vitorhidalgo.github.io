@@ -4,4 +4,84 @@
 	h2{
 		color: #fff;
 	}
+
+	.item{
+		width: calc(100%/4);
+		float: left;
+		display: inline;
+		position: relative;
+
+		.details{
+			width: 98%;
+			height: 98%;
+			position: absolute;
+			top: 50%; left: 50%;
+			margin-top: -49%;
+			margin-left: -49%;
+			overflow: hidden;
+			
+			@include transition(.5s);
+	    	@include border-radius(3px);
+
+			.title{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 20;
+		    	background-color: rgba(32, 32, 34, 0.9);
+				opacity: 0;
+
+				@include transition(.3s);
+
+				h3{
+					font-family: 'Open Sans', sans-serif;
+					color: #00a2d1;
+					font-size: 16px;
+					text-transform: uppercase;
+					letter-spacing: 0.2px;
+					font-weight: normal;
+					padding: 0 10px;
+
+					@include transition(.3s);
+					transform: scale3d(1.1,1.1,1.1);
+				}
+		    }
+
+			.bg{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 10;
+				top: 0; left: 0; right: 0; bottom: 0;
+				background: center no-repeat;
+				background-size: cover;
+				transform: scale3d(1,1,1);
+
+				@include transition(.3s);
+			}
+		}
+
+		&:hover{
+			.details{
+				.title{
+					opacity: 1;
+
+					h3{
+						transform: scale3d(1,1,1);
+					}
+				}
+			}
+			.bg{
+				transform: scale3d(1.1,1.1,1.1);
+			}
+		}
+
+		a{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0;
+			z-index: 30;
+		}
+	}
 }

@@ -1,4 +1,4 @@
-/* Last modified: 2/20/2017, 12:14:10 AM*/
+/* Last modified: 2/20/2017, 10:25:01 PM*/
 
 * {
   font-smoothing: antialiased;
@@ -584,6 +584,83 @@ nav.menu {
   background-color: #202022; }
   .portfolio h2 {
     color: #fff; }
+  .portfolio .item {
+    width: calc(100%/4);
+    float: left;
+    display: inline;
+    position: relative; }
+    .portfolio .item .details {
+      width: 98%;
+      height: 98%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -49%;
+      margin-left: -49%;
+      overflow: hidden;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px; }
+      .portfolio .item .details .title {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 20;
+        background-color: rgba(32, 32, 34, 0.9);
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+        .portfolio .item .details .title h3 {
+          font-family: 'Open Sans', sans-serif;
+          color: #00a2d1;
+          font-size: 16px;
+          text-transform: uppercase;
+          letter-spacing: 0.2px;
+          font-weight: normal;
+          padding: 0 10px;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          transform: scale3d(1.1, 1.1, 1.1); }
+      .portfolio .item .details .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: center no-repeat;
+        background-size: cover;
+        transform: scale3d(1, 1, 1);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+    .portfolio .item:hover .details .title {
+      opacity: 1; }
+      .portfolio .item:hover .details .title h3 {
+        transform: scale3d(1, 1, 1); }
+    .portfolio .item:hover .bg {
+      transform: scale3d(1.1, 1.1, 1.1); }
+    .portfolio .item a {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 30; }
 
 .contact {
   background-color: #2b3744;
