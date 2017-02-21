@@ -85,3 +85,38 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 840px){
+	.portfolio{
+
+		.item{
+			width: calc(100%/3);
+		}
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.portfolio{
+
+		.item{
+			width: calc(100%/2);
+
+			.table{
+				display: table;
+			}
+
+			.table-cell{
+				display: table-cell;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 440px){
+	.portfolio{
+
+		.item{
+			width: calc(100%/1);
+		}
+	}
+}

@@ -1,4 +1,4 @@
-/* Last modified: 2/20/2017, 10:25:01 PM*/
+/* Last modified: 2/20/2017, 10:52:41 PM*/
 
 * {
   font-smoothing: antialiased;
@@ -661,6 +661,22 @@ nav.menu {
       bottom: 0;
       right: 0;
       z-index: 30; }
+
+@media only screen and (max-width: 840px) {
+  .portfolio .item {
+    width: calc(100%/3); } }
+
+@media only screen and (max-width: 767px) {
+  .portfolio .item {
+    width: calc(100%/2); }
+    .portfolio .item .table {
+      display: table; }
+    .portfolio .item .table-cell {
+      display: table-cell; } }
+
+@media only screen and (max-width: 440px) {
+  .portfolio .item {
+    width: calc(100%/1); } }
 
 .contact {
   background-color: #2b3744;
