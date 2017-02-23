@@ -1,6 +1,9 @@
 .contact{
+	height: 100%;
 	background-color: #2b3744;
 	color: #fff;
+	padding: 0 14px;
+
 	form{
 		width: 101.3%;
 		margin-left: -0.6%;
@@ -77,6 +80,14 @@
 					color: #00a2d1;
 				}
 			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px), screen and (max-height: 510px){
+	.contact{
+		.table, .table-cell{
+			display: inline-block;
 		}
 	}
 }

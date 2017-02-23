@@ -1,8 +1,13 @@
 .skills{
 	background-color: #2c3e52;
+	text-align: center;
 
 	h2{
 		color: #fff;
+	}
+
+	.wrapper{
+		display: inline-block;
 	}
 
 	.item{
@@ -192,7 +197,7 @@
 {
 	.skills{
 		.item{
-			width: 25%;
+			width: calc(100% / 4);
 		}
 	}
 }
@@ -200,7 +205,7 @@
 @media only screen and (max-width: 600px){
 	.skills{
 		.item{
-			width: 33.3333%;
+			width: calc(100% / 3);
 		}
 	}
 }
@@ -208,7 +213,7 @@
 @media only screen and (max-width: 450px){
 	.skills{
 		.item{
-			width: 50%;
+			width: calc(100% / 2);
 		}
 	}
 }

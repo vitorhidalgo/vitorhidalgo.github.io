@@ -1,27 +1,29 @@
 .portfolio{
 	background-color: #202022;
+	text-align: center;
+
+	.wrapper{
+		display: inline-block;
+	}
 
 	h2{
 		color: #fff;
 	}
 
 	.item{
-		width: calc(100%/4);
+		width: calc(100%/5);
 		float: left;
 		display: inline;
 		position: relative;
 
 		.details{
-			width: 98%;
-			height: 98%;
+			width: 96%;
+			height: 96%;
 			position: absolute;
-			top: 50%; left: 50%;
-			margin-top: -49%;
-			margin-left: -49%;
+			margin: 0 2% 4% 2%;
 			overflow: hidden;
 			
 			@include transition(.5s);
-	    	@include border-radius(3px);
 
 			.title{
 				width: 100%;
@@ -35,11 +37,11 @@
 
 				h3{
 					font-family: 'Open Sans', sans-serif;
-					color: #00a2d1;
+					color: #fff;
 					font-size: 16px;
 					text-transform: uppercase;
 					letter-spacing: 0.2px;
-					font-weight: normal;
+					font-weight: 400;
 					padding: 0 10px;
 
 					@include transition(.3s);
@@ -56,6 +58,8 @@
 				background: center no-repeat;
 				background-size: cover;
 				transform: scale3d(1,1,1);
+				overflow: hidden;
+	    		@include border-radius(2px);
 
 				@include transition(.3s);
 			}
@@ -86,11 +90,11 @@
 	}
 }
 
-@media only screen and (max-width: 840px){
+@media only screen and (max-width: 768px){
 	.portfolio{
 
 		.item{
-			width: calc(100%/3);
+			width: calc(100%/4);
 		}
 	}
 }
@@ -99,7 +103,7 @@
 	.portfolio{
 
 		.item{
-			width: calc(100%/2);
+			width: calc(100%/3);
 
 			.table{
 				display: table;
@@ -112,11 +116,11 @@
 	}
 }
 
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 450px){
 	.portfolio{
 
 		.item{
-			width: calc(100%/1);
+			width: calc(100%/2);
 		}
 	}
 }

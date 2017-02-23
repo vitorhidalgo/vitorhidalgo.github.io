@@ -17,7 +17,7 @@ portfolio.TMain = function($, objname, options)
 			position  : $('nav.menu').offset().top
 		};
 
-		self.doc = document.documentElement;
+		self.doc  = document.documentElement;
 	};
 
 	this.onReady = function()
@@ -49,7 +49,7 @@ portfolio.TMain = function($, objname, options)
 			'scroll', 
 			function()
 			{
-				// self.fixedMenu();
+				
 			}
 		);
 
@@ -59,23 +59,15 @@ portfolio.TMain = function($, objname, options)
 			'.menu a[href^="#"]',
 			function(e)
 			{
-				var href=$(this).attr('href'), target=$(href).parents('.mCustomScrollbar');
-				if( target.length )
-				{
-					e.preventDefault();
-					
-					$('nav.menu a.open').removeClass('open');
-					$('nav.menu .cont-menu').removeClass('open');
+				var href = $(this).attr( 'href' );
+				e.preventDefault();
+				
+				$( 'nav.menu a.open' ).removeClass( 'open' );
+				$( 'nav.menu .cont-menu' ).removeClass( 'open' );
 
-					target.mCustomScrollbar( 'scrollTo', href );
-				}
+				$.scrollify.move( href );
 			}
 		);
-
-		$('.menu a[href*="#"]').mPageScroll2id({
-			clickEvents    : true,
-			highlightClass : 'active'
-		});
 	};
 
 	this.breakPoints = function()
@@ -103,7 +95,7 @@ portfolio.TMain = function($, objname, options)
 
 	this.destroyScroll = function()
 	{
-		$('#page').mCustomScrollbar("destroy");
+		$.scrollify.destroy();
 	};
 
 	this.onElementsEvents = function()
@@ -153,26 +145,18 @@ portfolio.TMain = function($, objname, options)
 
 	this.applyScroll = function()
 	{
-		$('body').mCustomScrollbar
+		$.scrollify
 		(
 			{
-				'theme'             : 'vho',
-				'scrollbarPosition' : 'outside',
-				'scrollEasing'      : 'easeInOut',
-				'autoHideScrollbar' : true,
-				'callbacks'         : {
-					whileScrolling : function()
-					{
-						self.fixedMenu( this.mcs.draggerTop );
-					}
+				section : ".panel",
+				scrollbars: true,
+				sectionName : "section-name",
+				interstitialSection : 'footer',
+				before : function(index, sections)
+				{
+					$('.menu li.active').removeClass('active');
+					$('.menu li:eq(' + ( index - 1 ) + ')').addClass('active');
 				}
-			}
-		);
-
-		$("a[href*='#']").mPageScroll2id
-		(
-			{
-				'appendHash' : true
 			}
 		);
 	};
