@@ -39,6 +39,10 @@ img{
    color: #fff;  
 }
 
+.no-scroll{
+	overflow: hidden !important;
+}
+
 object{
 	display: none;
 }
@@ -234,6 +238,7 @@ nav.menu{
 @import 'skills';
 @import 'portfolio';
 @import 'contact';
+@import 'modal-portfolio';
 
 footer{
 	width: 100%;

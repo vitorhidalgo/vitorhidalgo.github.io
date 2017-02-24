@@ -49,7 +49,7 @@ portfolio.TMain = function($, objname, options)
 			'scroll', 
 			function()
 			{
-				
+
 			}
 		);
 
@@ -149,9 +149,7 @@ portfolio.TMain = function($, objname, options)
 		(
 			{
 				section : ".panel",
-				scrollbars: true,
 				sectionName : "section-name",
-				interstitialSection : 'footer',
 				before : function(index, sections)
 				{
 					$('.menu li.active').removeClass('active');
