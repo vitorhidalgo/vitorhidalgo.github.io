@@ -41,7 +41,7 @@ var common = (function(){
 				readOnly : true,
 				width : 196,
 				height : 200,
-				thickness: .18,
+				thickness: 0.18,
 				fgColor: '#14b9d6',
 				linecap : 'round',
 				displayInput : false,
@@ -144,9 +144,9 @@ var common = (function(){
 				$.each(data, function(index, value){
 					if (value.id === project){
 						if(value.urlProject !== ""){
-							$('.details .image').html('<a href="' + value.urlProject + '" target="_blank"><img src="' + value.thumb2 + '" alt=""></a>');	
+							$('.details .image').html('<a href="' + value.urlProject + '" target="_blank"><img src="' + value.thumb2 + '" alt=""></a>');
 						}else{
-							$('.details .image').html('<img src="' + value.thumb2 + '" alt="">');	
+							$('.details .image').html('<img src="' + value.thumb2 + '" alt="">');
 						}
 						$('.details aside h4').text(value.nameCustomer);
 						$('.details aside h5').text(value.nameProject);
@@ -158,7 +158,7 @@ var common = (function(){
 							}else{
 								strHtml += v + ", ";
 							}
-						})
+						});
 						$('.details aside p:eq(1)').text(strHtml);
 						strHtml = "";
 						$.each(value.plataforms, function(i, v){
@@ -172,7 +172,7 @@ var common = (function(){
 						});
 						$('.details aside').append(strHtml);
 					}
-				})
+				});
 			});
 		},
 		validateForm : function(){
@@ -235,9 +235,9 @@ var common = (function(){
 			});
 			$('section#contact textarea').focusout(function(){
 				$(this).removeClass('active');
-			})
+			});
 		}
-	};		
+	};
 
 })();
 

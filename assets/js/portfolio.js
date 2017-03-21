@@ -84,7 +84,7 @@ portfolio.Tportfolio = function($, objname, options)
 			{
 				$('.modal-portfolio').removeClass('open close');
 			}, 
-			1600
+			2300
 		);
 	};
 
