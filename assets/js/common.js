@@ -18,8 +18,8 @@ var common = (function(){
 					var yPos = -($(window).scrollTop() / $obj.data('speed'));
 					var bgpos = '50% ' + yPos + 'px';
 					$obj.css('background-position', bgpos);
-				})
-			})
+				});
+			});
 		},
 		fixedMenu: function(){
 			var nav = $('section.navigation');
