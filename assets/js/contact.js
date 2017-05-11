@@ -89,7 +89,7 @@ portfolio.Tcontact = function($, objname, options)
 		)
 		.done
 		(
-			function( data ) 
+			function( data )
 			{
 				self.resetForm();
 				self.hideLoading();
@@ -98,13 +98,13 @@ portfolio.Tcontact = function($, objname, options)
 		)
 		.fail
 		(
-			function( data ) 
+			function( data )
 			{
 				console.log("error");
 				self.hideLoading();
 			}
 		);
-		
+
 		self.log.info(p_form);
 	};
 
@@ -122,10 +122,10 @@ portfolio.Tcontact = function($, objname, options)
 	{
 		setTimeout
 		(
-			function() 
+			function()
 			{
 				$('.loading').fadeOut();
-			}, 
+			},
 			1000
 		);
 	};

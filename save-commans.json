@@ -1,0 +1,5 @@
+{
+    "commands" : [
+        "path/www/assets/*.js : gulp scripts"
+    ]
+}
